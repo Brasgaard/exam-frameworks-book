@@ -62,7 +62,7 @@ class App extends Component {
 
                 <section className="hero is-primary">
                     <div className="hero-body">
-                        <div className="container">
+                        <div className="container" >
                             <Link to="/"><h1 className="title is-2">BOOK MARKETPLACE</h1></Link>
                             <h2 className="subtitle">
                                 For students, by students.
@@ -110,7 +110,7 @@ class App extends Component {
                     <div className="container">
                         <div className="content has-text-centered">
                             <p>
-                                <strong>BOOK MARKETPLACE</strong> by EAAA Students
+                                <strong style={{ color: '#ffffff' }}>BOOK MARKETPLACE</strong> by EAAA Students
                             </p>
                         </div>
                     </div>

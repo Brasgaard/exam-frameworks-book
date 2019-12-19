@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-
+import AskQuestion from "./AskQuestion";
+import { Link } from "@reach/router";
 
 export default class PostBook extends Component {
 
@@ -40,10 +41,7 @@ export default class PostBook extends Component {
                     <label>
                         Pick category:<br/>
                         <select name="select" /*value={this.state.value}*/ onChange={this.handleChange}>
-                            <option value="react">React</option>
-                            <option value="html">HTML</option>
                             <option value="styling">Styling</option>
-                            <option value="mongodb">MongoDB</option>
                         </select>
                     </label>
                     <br/>

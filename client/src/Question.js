@@ -14,12 +14,6 @@ export default class Question extends Component {
                         <li key={ans._id}>
                             <div key={ans._id} className="columns">
                                 <div className="column"><Link  className="list-item" to={"/QuestionsSingle"}>{ans.text}</Link></div>
-                                <div className="column is-one-fifth">
-                                    <button className="button is-small" onClick={
-                                        () => this.props.handleVote(question._id, ans._id)}>Vote Up
-                                    </button>
-                                    <span className="is-outlined">  {ans.votes}</span>
-                                </div>
                             </div>
                         </li>
                 ) : [];

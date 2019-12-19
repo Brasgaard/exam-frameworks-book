@@ -57,9 +57,11 @@ class QuestionDAL {
                 let question = new this.questionModel({
                     text: 'Styling',
                     answers: [
-                        {text: "What is CSS?"},
-                        {text: "What is SASS?"},
-                        {text: "Don't style too much"},
+                        {text: "Title: How to CSS"},
+                        {text: "Author: Donald Hass"},
+                        {text: "Category: Styling"},
+                        {text: "Price: 200"},
+                        {text: "Name of seller: Benjamin"}
                     ]
                 });
                 promises.push(question.save());

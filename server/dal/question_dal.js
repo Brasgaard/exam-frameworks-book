@@ -4,8 +4,7 @@ class QuestionDAL {
         const questionSchema = new mongoose.Schema({
             text: String,
             answers: [{
-                text: String,
-                votes: Number
+                text: String
             }]
         });
         this.questionModel = mongoose.model('question', questionSchema);
@@ -56,11 +55,11 @@ class QuestionDAL {
 
             for (let i = 0; i < count; i++) {
                 let question = new this.questionModel({
-                    text: 'What is React Part 1',
+                    text: 'Styling',
                     answers: [
-                        {text: "No idea!", votes: -3},
-                        {text: "Using async functions!", votes: 2},
-                        {text: "It's all async but based on promises!", votes: 3},
+                        {text: "What is CSS?"},
+                        {text: "What is SASS?"},
+                        {text: "Don't style too much"},
                     ]
                 });
                 promises.push(question.save());

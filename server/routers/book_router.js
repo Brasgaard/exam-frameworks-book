@@ -3,12 +3,12 @@ module.exports = (dal) => {
     let router = express.Router();
 
     router.get('/', (req, res) => {
-        dal.getQuestions().then(questions => res.json(questions));
+        dal.getBooks().then(books => res.json(books));
     });
 
     router.get('/:id', (req, res) => {
         let id = req.params.id;
-        dal.getQuestion(id).then(question => res.json(question));
+        dal.getBook(id).then(book => res.json(book));
     });
 
     router.post('/', (req, res) => {

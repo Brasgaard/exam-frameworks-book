@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import {Link, Router} from "@reach/router";
 import {connect} from "react-redux";
-import { login, logout, loadQuestions, postQuestion, postAnswer, voteAnswerUp, hideAlert } from './actions';
+import { login, logout, loadBooks, loadCategories, postAnswer, voteAnswerUp, hideAlert } from './actions';
 
-import Questions from "./Questions";
-import Question from "./Question";
+import Books from "./Books";
+import Categories from "./Categories";
+import Book from "./Book";
 import Login from "./Login";
 import Alert from "./Alert";
 import UserHeader from "./UserHeader";
@@ -24,7 +25,8 @@ class App extends Component {
     }
 
     componentDidMount() {
-        this.props.loadQuestions();
+        this.props.loadBooks();
+        this.props.loadCategories();
     }
 
     resetAlert() {
@@ -77,23 +79,21 @@ class App extends Component {
                     <Alert msg={this.state.alertMsg}/>
 
                     <Router>
-                        <Questions path="/"
-                            questions={this.props.questions}
-                            onAskQuestion={(text) => this.props.postQuestion(text)}
+                        <Books path="/categories/:category"
+                               books={this.props.books}
+                        />
+                        <Categories path="/"
+                                    categories={this.props.categories}
                         />
 
-                        <Question path="/question/:id"
-                            getQuestion={(id) => this.props.questions.find(e => e._id === id)}
-                            handleVote={(id, aid) => this.props.voteAnswerUp(id, aid)}
-                            onPostAnswer={(id, text) => this.props.postAnswer(id, text)}
+                        <Book path="/book/:id"
+                              books={this.props.books}
                         />
 
                         <Login path="/login"
                             login={(username, password) => this.props.login(username, password)}
                             infoMsg={this.state.infoMsg}
                         />
-
-                        <QuestionsSingle path="/QuestionsSingle" questions={this.props.questions}/>
 
                         <AdminView path="/AdminView"
                                    questions={this.props.questions}
@@ -121,14 +121,16 @@ class App extends Component {
 }
 
 const mapStateToProps = state => ({
-    questions: state.questions,
+    books: state.books,
     user: state.user,
+    categories: state.categories,
     notifications: state.notifications
 });
 
 const mapDispatchToProps = dispatch => ({
-    loadQuestions: _ => dispatch(loadQuestions()),
-    postQuestion: text => dispatch(postQuestion(text)),
+    loadBooks: _ => dispatch(loadBooks()),
+    loadCategories: _ => dispatch(loadCategories()),
+
     postAnswer: (id, text) => dispatch(postAnswer(id, text)),
     login: (username, password) => dispatch(login(username, password)),
     logout: _ => dispatch(logout()),

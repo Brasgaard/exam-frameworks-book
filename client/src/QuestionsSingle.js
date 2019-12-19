@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class Book extends Component {
+export default class QuestionsSingle extends Component {
     render() {
 
 
@@ -9,7 +9,7 @@ export default class Book extends Component {
 
         let questions = [];
         for (let i = 0; i < categories.length; i++) {
-            questions.push(categories[i].questions);
+            questions.push(categories[i].answers);
         }
 
         let array = [];

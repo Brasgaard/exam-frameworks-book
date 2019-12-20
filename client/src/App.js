@@ -2,14 +2,12 @@ import React, {Component} from 'react';
 import {Link, Router} from "@reach/router";
 import {connect} from "react-redux";
 import { login, logout, loadBooks, loadCategories, postAnswer, voteAnswerUp, hideAlert } from './actions';
-
 import Books from "./Books";
 import Categories from "./Categories";
 import Book from "./Book";
 import Login from "./Login";
 import Alert from "./Alert";
 import UserHeader from "./UserHeader";
-import QuestionsSingle from "./QuestionsSingle";
 import AdminView from "./AdminView";
 import PostBook from "./PostBook";
 import AskQuestion from "./AskQuestion";

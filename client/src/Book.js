@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { Link } from "@reach/router";
 
 export default class Book extends Component {
 
@@ -11,16 +10,15 @@ export default class Book extends Component {
 
         return (
             <>
-                <p>Title: {book.title}</p>
+                <p><strong>Title:</strong> {book.title}</p>
                 <br/>
-                <p>Author: {book.author}</p>
+                <p><strong>Author:</strong> {book.author}</p>
                 <br/>
-                <p>Category: {book.category}</p>
+                <p><strong>Category:</strong> {book.category}</p>
                 <br/>
-                <p>Price: {book.price}</p>
+                <p><strong>Price:</strong> {book.price}</p>
                 <br/>
-                <p>Name: {book.name}</p>
-                <br/>
+                <p><strong>Name:</strong> {book.name}</p>
             </>
         )
     };

@@ -16,8 +16,7 @@ export default class Books extends Component {
             {newArray.map((item, i) => (
                 <li>
                     <Link to={"/book/" + item._id}>
-                        {item.title} -
-                        {item.author}</Link>
+                        {item.title} by {item.author}</Link>
                 </li>
 
             ))}

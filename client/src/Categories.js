@@ -7,9 +7,12 @@ export default class categories extends Component {
         const categoryList = this.props.categories;
         let booksContent =  <>
             {categoryList.map((item, i) => (
+
                 <div>
-                    <Link to={"/categories/" + item.title}>
+                    <li>
+                        <Link to={"/categories/" + item.title}>
                         {item.title}</Link>
+                    </li>
                 </div>
 
             ))}

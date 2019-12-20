@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Link, Router} from "@reach/router";
 import AskQuestion from "./AskQuestion";
 import Categories from "./Categories";
 

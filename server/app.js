@@ -31,6 +31,8 @@ const BookDAL = require('./dal/book_dal')(mongoose);
 const userDAL = require('./dal/user_dal')(mongoose);
 const categoryDAL = require('./dal/category_dal')(mongoose);
 
+// HAD  TO ADD MONGO_URL HERE ELSE DATABASE DIDNT WORK PROPERLY. BUT I DID USE HEROKU TO HIDE IT  IN THE START VIA SETTINGS AND INPUT VALUES
+
 /**** Start ****/
 mongoose.connect('mongodb+srv://alex:hejmeddig@cluster0-zo6r1.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true})
     .then(async () => {

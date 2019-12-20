@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import AskQuestion from "./AskQuestion";
-import { Link } from "@reach/router";
 
 export default class PostBook extends Component {
 

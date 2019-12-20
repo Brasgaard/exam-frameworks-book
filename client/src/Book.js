@@ -11,15 +11,15 @@ export default class Book extends Component {
 
         return (
             <>
-                {book.title}
+                <p>Title: {book.title}</p>
                 <br/>
-                {book.author}
+                <p>Author: {book.author}</p>
                 <br/>
-                {book.category}
+                <p>Category: {book.category}</p>
                 <br/>
-                {book.price}
+                <p>Price: {book.price}</p>
                 <br/>
-                {book.name}
+                <p>Name: {book.name}</p>
                 <br/>
             </>
         )

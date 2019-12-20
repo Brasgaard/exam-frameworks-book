@@ -96,7 +96,7 @@ class App extends Component {
                         />
 
                         <AdminView path="/AdminView"
-                                   questions={this.props.questions}
+                                   categories={this.props.categories}
                                    onAskQuestion={(text) => this.props.postQuestion(text)} />
 
                         <PostBook path="/PostBook"/>
